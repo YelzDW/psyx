@@ -1,0 +1,118 @@
+/* src/App.css */
+.button svg {
+    width: 25px;
+    height: 25px;
+  }
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  .navbar {
+    background-color: #333;
+    color: #fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+  }
+  
+  .navbar h1 {
+    margin: 0;
+  }
+  
+  .navbar ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    gap: 1rem;
+  }
+  
+  .navbar ul li {
+    margin: 0;
+  }
+  
+  .button {
+    --color: #ffffff;
+    padding: 0.8em 1.7em;
+    background-color: transparent;
+    border-radius: .3em;
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+    transition: .5s;
+    font-weight: 400;
+    font-size: 17px;
+    border: 1px solid;
+    font-family: inherit;
+    text-transform: uppercase;
+    color: var(--color);
+    z-index: 1;
+  }
+  
+  .button::before, .button::after {
+    content: '';
+    display: block;
+    width: 50px;
+    height: 50px;
+    transform: translate(-50%, -50%);
+    position: absolute;
+    border-radius: 50%;
+    z-index: -1;
+    background-color: var(--color);
+    transition: 1s ease;
+  }
+  
+  .button::before {
+    top: -1em;
+    left: -1em;
+  }
+  
+  .button::after {
+    left: calc(100% + 1em);
+    top: calc(100% + 1em);
+  }
+  
+  .button:hover::before, .button:hover::after {
+    height: 410px;
+    width: 410px;
+  }
+  
+  .button:hover {
+    color: rgb(10, 25, 30);
+  }
+  
+  .button:active {
+    filter: brightness(.8);
+  }
+  
+  .home header {
+    text-align: center;
+    padding: 2rem 0;
+  }
+  
+  .home main {
+    padding: 1rem 2rem;
+  }
+  
+  .home .hero {
+    background-color: #f4f4f4;
+    padding: 2rem;
+    text-align: center;
+  }
+  
+  .home .featured-products,
+  .home .about-us {
+    margin: 2rem 0;
+  }
+  
+  .home footer {
+    text-align: center;
+    padding: 1rem;
+    background-color: #333;
+    color: #fff;
+  }
+  

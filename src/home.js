@@ -6,14 +6,6 @@ function HomePage() {
     <div className="home">
       <header>
         <h1>Psy-X</h1>
-        <nav>
-          <ul>
-            <li><a href="#home">Início</a></li>
-            <li><a href="#produtos">Produtos</a></li>
-            <li><a href="#sobre">Sobre</a></li>
-            <li><a href="#contato">Contato</a></li>
-          </ul>
-        </nav>
       </header>
       
       <main>
