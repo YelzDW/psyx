@@ -1,4 +1,12 @@
 /* src/App.css */
+.logo {
+  height: 50px; 
+  width: auto;  
+}
+.logo1 {
+  height: 100px; 
+  width: auto;  
+}
 .button svg {
     width: 25px;
     height: 25px;
@@ -11,7 +19,7 @@ body {
   }
   
   .navbar {
-    background-color: #333;
+    background-color: #353535;
     color: #fff;
     display: flex;
     justify-content: space-between;

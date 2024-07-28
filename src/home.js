@@ -1,11 +1,14 @@
 import React from 'react';
 import './App.css';
+import logo from './img/logo1.png';
 
 function HomePage() {
   return (
     <div className="home">
       <header>
-        <h1>Psy-X</h1>
+        <h1>
+          <img src={logo} alt="PSY-X Logo" className="logo1" />  {}
+          </h1>
       </header>
       
       <main>
