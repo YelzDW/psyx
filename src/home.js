@@ -4,6 +4,7 @@ import logo from './img/logo1.png';
 
 function HomePage() {
   return (
+    <div class="background">
     <div className="home">
       <header>
         <h1>
@@ -13,25 +14,39 @@ function HomePage() {
       
       <main>
         <section className="hero">
-          <h2>Bem-vindo à Psy-X</h2>
-          <p>Descubra nossa coleção de óculos estilosos e únicos</p>
-          <button>Ver Produtos</button>
-        </section>
-        
-        <section className="featured-products">
-          <h3>Produtos em Destaque</h3>
-          {/* Aqui você pode adicionar alguns produtos em destaque */}
-        </section>
-        
-        <section className="about-us">
-          <h3>Sobre a Psy-X</h3>
-          <p>Somos especialistas em óculos de alta qualidade e design inovador.</p>
+          <h2>Welcome to PSY-X</h2>
+          <p>Discover our collection of stylish and unique glasses</p>
+          <div class="containerbanner1">
+  <div>
+    <div class="banner1">
+      <h2>RED</h2>
+    </div>
+  </div>
+  <div>
+    <div class="banner1">
+      <h2>BLUE</h2>
+    </div>
+  </div>
+  <div>
+    <div class="banner1">
+      <h2>ROSE</h2>
+    </div>
+  </div>
+  <div>
+    <div class="banner1">
+      <h2>DARK</h2>
+    </div>
+  </div>
+</div>
+<button class="buttonhome">SHOPPING</button>
+
         </section>
       </main>
       
       <footer>
-        <p>&copy; 2024 Psy-X. Todos os direitos reservados.</p>
+        <p>&copy; 2024 Psy-X. All rights reserved.</p>
       </footer>
+    </div>
     </div>
   );
 }

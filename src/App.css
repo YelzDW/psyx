@@ -1,10 +1,33 @@
 /* src/App.css */
+.background {
+  width: 100%;
+  height: 100%;
+
+  background: #262626;
+  --gap: 5em;
+  --line: 1px;
+  --color: rgba(255, 255, 255, 0.2);
+
+  background-image: linear-gradient(
+      -90deg,
+      transparent calc(var(--gap) - var(--line)),
+      var(--color) calc(var(--gap) - var(--line) + 1px),
+      var(--color) var(--gap)
+    ),
+    linear-gradient(
+      0deg,
+      transparent calc(var(--gap) - var(--line)),
+      var(--color) calc(var(--gap) - var(--line) + 1px),
+      var(--color) var(--gap)
+    );
+  background-size: var(--gap) var(--gap);
+}
 .logo {
   height: 50px; 
   width: auto;  
 }
 .logo1 {
-  height: 100px; 
+  height: 150px; 
   width: auto;  
 }
 .button svg {
@@ -107,7 +130,7 @@ body {
   }
   
   .home .hero {
-    background-color: #f4f4f4;
+    background-color: #444444;
     padding: 2rem;
     text-align: center;
   }
@@ -121,6 +144,152 @@ body {
     text-align: center;
     padding: 1rem;
     background-color: #333;
-    color: #fff;
+    color: #ffffff;
+  }
+ 
+  .containerbanner1 {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    height: 300px;
+    gap: 10px;
+
+    > div {
+        flex: 0 0 120px;
+        border-radius: 0.5rem;
+        transition: 0.5s ease-in-out;
+        cursor: pointer;
+        box-shadow: 1px 5px 15px #acacac;
+        position: relative;
+        overflow: hidden;
+
+      &:nth-of-type(1) {
+          background: url("./img/j1.jpg") no-repeat 50% / cover;
+      }
+      &:nth-of-type(2) {
+          background: url("./img/j2.jpg") no-repeat 50% / cover;
+      }
+      &:nth-of-type(3) {
+          background: url("./img/j3.jpg") no-repeat 50% / cover;
+      }
+      &:nth-of-type(4) {
+          background: url("./img/j4.jpg") no-repeat 50% / cover;
+      }
+
+        .banner1 {
+            font-size: 1.5rem;
+            color: #fff;
+            display: flex;
+            align-items: center;
+            padding: 15px;
+            opacity: 0;
+            flex-direction: column;
+            height: 100%;
+            justify-content: flex-end;
+            background: rgb(66, 66, 66);
+            background: linear-gradient(
+                0deg,
+                rgba(65, 65, 65, 0.676) 0%,
+                rgba(255, 255, 255, 0) 100%
+            );
+            transform: translatey(100%);
+            transition: opacity 0.5s ease-in-out, transform 0.5s 0.2s;
+            visibility: hidden;
+
+            span {
+                display: block;
+                margin-top: 5px;
+                font-size: 1.2rem;
+            }
+        }
+
+        &:hover {
+            flex: 0 0 250px;
+            box-shadow: 1px 3px 15px #ffffff;
+            transform: translatey(-30px);
+        }
+
+        &:hover .banner1 {
+            opacity: 1;
+            transform: translatey(0%);
+            visibility: visible;
+        }
+    }
+}
+  
+  main {
+    display: flex;
+    justify-content: center; /* Centralizar o conteúdo do main */
+    padding: 5rem;
+    background-color: #303030; /* Cor de fundo do main */
+  }
+  .hero {
+    padding: 2rem;
+    text-align: center;
+    margin-bottom: 2rem;
+    border-radius: 50px;
+    max-width: 800px; /* Largura máxima do hero */
+    width: 100%; /* Garantir que hero ocupe toda a largura disponível */
+    color: white; /* Cor do texto branca */
+  }
+  
+  .hero h2 {
+    margin-bottom: 1rem;      /* Espaço entre o título e o parágrafo */
+  }
+  
+  .hero p {
+    margin-bottom: 4rem;      /* Espaço entre o parágrafo e as imagens */
+  }
+  
+  .buttonhome {
+    min-width: 120px;
+  
+    position: relative;
+    cursor: pointer;
+    margin-top: 50px;
+    padding: 12px 17px;
+    border: 0;
+    border-radius: 20px;
+  
+    box-shadow: inset 0 0 0 1px rgb(255, 255, 255);
+    background: radial-gradient(
+      ellipse at bottom,
+      rgb(67, 67, 67) 0%,
+      rgb(30, 30, 30) 45%
+    );
+  
+    color: rgba(255, 255, 255, 0.66);
+  
+    transition: all 1s cubic-bezier(0.15, 0.83, 0.66, 1);
+  }
+  
+  .buttonhome::before {
+    content: "";
+    width: 70%;
+    height: 1px;
+  
+    position: absolute;
+    bottom: 0;
+    left: 15%;
+  
+    background: rgb(255, 255, 255);
+    background: linear-gradient(
+      90deg,
+      rgb(255, 255, 255) 0%,
+      rgba(255, 255, 255, 1) 50%,
+      rgba(255, 255, 255, 0) 100%
+    );
+    opacity: 0.2;
+  
+    transition: all 1s cubic-bezier(0.15, 0.83, 0.66, 1);
+  }
+  
+  .buttonhome:hover {
+    color: rgb(255, 255, 255, 1);
+    transform: scale(1.1) translateY(-3px);
+  }
+  
+  .buttonhome:hover::before {
+    opacity: 1;
   }
   

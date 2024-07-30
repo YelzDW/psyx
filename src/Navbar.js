@@ -7,6 +7,7 @@ import { RiShoppingBag4Fill } from "react-icons/ri";
 import { PiInstagramLogoFill } from "react-icons/pi";
 import logo from './img/navbar.png';
 
+
 function Navbar() {
   return (
     <nav className="navbar">
